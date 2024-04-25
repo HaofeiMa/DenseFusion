@@ -1,7 +1,7 @@
 setup.py
-/home/huffie/Documents/PoseEstimation/DenseFusion/lib/knn/src/vision.cpp
-/home/huffie/Documents/PoseEstimation/DenseFusion/lib/knn/src/cpu/knn_cpu.cpp
-/home/huffie/Documents/PoseEstimation/DenseFusion/lib/knn/src/cuda/knn.cu
+/home/mahaofei/Programs/Pose_Estimation/DenseFusion/lib/knn/src/vision.cpp
+/home/mahaofei/Programs/Pose_Estimation/DenseFusion/lib/knn/src/cpu/knn_cpu.cpp
+/home/mahaofei/Programs/Pose_Estimation/DenseFusion/lib/knn/src/cuda/knn.cu
 knn_pytorch.egg-info/PKG-INFO
 knn_pytorch.egg-info/SOURCES.txt
 knn_pytorch.egg-info/dependency_links.txt

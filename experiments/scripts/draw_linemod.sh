@@ -6,24 +6,34 @@ set -e
 export PYTHONUNBUFFERED="True"
 export CUDA_VISIBLE_DEVICES=0
 
-# python3 ./tools/draw_linemod.py --data_root ./datasets/linemod/Linemod_preprocessed/data/01\
+# python3 ./tools/draw_linemod.py --data_root ./datasets/linemod/Linemod_preprocessed/data/09\
 #   --item 0107\
-#   --seg_root ./datasets/linemod/Linemod_preprocessed/segnet_results/01_label\
-#   --obj 1\
+#   --seg_root ./datasets/linemod/Linemod_preprocessed/segnet_results/09_label\
+#   --obj 9\
 #   --model_root ./datasets/linemod/Linemod_preprocessed/models\
-#   --model ./trained_models/linemod/pose_model_9_0.013053627398030966.pth\
-#   --refine_model ./trained_models/linemod/pose_refine_model_current.pth\
+#   --model ./trained_checkpoints/linemod/pose_model_9_0.01310166542980859.pth\
+#   --refine_model ./trained_checkpoints/linemod/pose_refine_model_493_0.006761023565178073.pth\
 #   --output ./
 
-# Linemod_processed 测试
-python3 ./tools/draw_linemod.py --data_root ./datasets/linemod/Linemod_preprocessed/data/08\
-  --item 0707\
-  --seg_root ./datasets/linemod/Linemod_preprocessed/segnet_results/08_label\
-  --obj 8\
-  --model_root ./datasets/linemod/Linemod_preprocessed/models\
+# LINEMOD 测试
+python3 ./tools/draw_linemod.py --data_root ./datasets/linemod/LINEMOD/data/01\
+  --item 0666\
+  --seg_root ./datasets/linemod/LINEMOD/segnet_results/01_label\
+  --obj 1\
+  --model_root ./datasets/linemod/LINEMOD/models\
   --model ./trained_models/linemod/pose_model_current.pth\
   --refine_model ./trained_models/linemod/pose_refine_model_current.pth\
   --output ./
+
+# Temp Pth
+# python3 ./tools/draw_linemod.py --data_root ./datasets/linemod/LINEMOD/data/03\
+#   --item 0167\
+#   --seg_root ./datasets/linemod/LINEMOD/segnet_results/03_label\
+#   --obj 3\
+#   --model_root ./datasets/linemod/LINEMOD/models\
+#   --model ./trained_models/pose_model_current.pth\
+#   --refine_model ./trained_models/pose_refine_model_current.pth\
+#   --output ./
 
 # --data_root：要选择的图像类别文件夹路径  
 # --item：选择的图像编号  

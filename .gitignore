@@ -2,3 +2,10 @@ datasets/linemod/Linemod_preprocessed
 datasets/linemod/LINEMOD
 trained_checkpoints
 trained_models
+logs/*
+!logs/.gitkeep
+experiments/logs/*
+lib/__pycache__/*
+lib/knn/__pycache__/*
+lib/knn/build/*
+lib/knn/dist/*

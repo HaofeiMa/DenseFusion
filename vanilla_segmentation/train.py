@@ -77,7 +77,8 @@ if __name__ == '__main__':
             optimizer.step()
             logger.info('Train time {0} Batch {1} CEloss {2}'.format(time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - st_time)), train_time, semantic_loss.item()))
             if train_time != 0 and train_time % 1000 == 0:
-                torch.save(model.state_dict(), os.path.join(opt.model_save_path, 'model_current.pth'))
+                # torch.save(model.state_dict(), os.path.join(opt.model_save_path, 'model_current.pth'))
+                torch.save(model.state_dict(), os.path.join(opt.model_save_path, 'model_current.pth'), _use_new_zipfile_serialization=False)
             train_time += 1
 
         train_all_cost = train_all_cost / train_time
@@ -102,5 +103,6 @@ if __name__ == '__main__':
 
         if test_all_cost <= best_val_cost:
             best_val_cost = test_all_cost
-            torch.save(model.state_dict(), os.path.join(opt.model_save_path, 'model_{}_{}.pth'.format(epoch, test_all_cost)))
+            # torch.save(model.state_dict(), os.path.join(opt.model_save_path, 'model_{}_{}.pth'.format(epoch, test_all_cost)))
+            torch.save(model.state_dict(), os.path.join(opt.model_save_path, 'model_{}_{}.pth'.format(epoch, test_all_cost)), _use_new_zipfile_serialization=False)
             print('----------->BEST SAVED<-----------')

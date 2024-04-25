@@ -12,6 +12,6 @@ export CUDA_VISIBLE_DEVICES=0
 #   --refine_model trained_checkpoints/linemod/pose_refine_model_493_0.006761023565178073.pth
 
 # My LINEMOD
-python3 ./tools/eval_linemod.py --dataset_root ./datasets/linemod/Linemod_preprocessed\
+python3 ./tools/eval_linemod.py --dataset_root ./datasets/linemod/LINEMOD\
   --model trained_models/linemod/pose_model_current.pth\
   --refine_model trained_models/linemod/pose_refine_model_current.pth
